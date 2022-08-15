@@ -23,3 +23,10 @@ useState Hook kullanıldı.
 ![Ekran Görüntüsü (431)](https://user-images.githubusercontent.com/74673470/184377009-f0b4118c-b5aa-420e-ba10-7022cf5ea844.png)
 
 ![Ekran Görüntüsü (430)](https://user-images.githubusercontent.com/74673470/184377015-ac12a377-f5a2-4271-bed2-80a680f41213.png)
+
+
+
+### Digital Clock
+useState Hook ve setInterval fonksiyonu kullanıldı
+
+![image](https://user-images.githubusercontent.com/74673470/184623985-39f0de6b-1608-4ede-bf8b-cb7b3db5076f.png)
