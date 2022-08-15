@@ -34,3 +34,18 @@ toLocaleTimeString(): Metodu, değişken içerisindeki tarih ve zaman bilgisinin
 setInterval():Bir işlemi belirli zaman aralıklarında tekrarlayan iki parametre alan bir fonksiyondur.Birinci parametre çalıştırılacak fonksiyonu, ikinci parametre de bu işlemin kaç mili saniye de tekrar edileceğini temsil eder.
 
 ![image](https://user-images.githubusercontent.com/74673470/184623985-39f0de6b-1608-4ede-bf8b-cb7b3db5076f.png)
+
+
+### Random Quote
+useState useEffect ve fetch kullanıldı.
+
+fetch():Fetch API, tıpkı Ajax gibi veri alma, veri gönderme işlemlerinde kullanılan asenkron bir yapıdır.
+
+API -> https://type.fit/api/quotes
+
+![Ekran Görüntüsü (441)](https://user-images.githubusercontent.com/74673470/184708328-44c10847-b3b9-435a-a4f9-c83bfcdc16aa.png)
+
+![Ekran Görüntüsü (438)](https://user-images.githubusercontent.com/74673470/184707874-4a3f3518-05fc-4c9c-a137-6fb318dce2b9.png)
+
+![Ekran Görüntüsü (439)](https://user-images.githubusercontent.com/74673470/184707878-e5c52629-277b-4570-b3a0-3861530d0d2e.png)
+
