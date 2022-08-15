@@ -3,8 +3,11 @@ import React,{useState,useEffect}from 'react'
 
 function App() {
   const name="Aleyna"
+
   let time=new Date().toLocaleTimeString();
+
   const [currentTime,setCurrentTime]=useState(time);
+  const[loading,setLoading]=useState(false);
 
   const Time=()=>{
     let time=new Date().toLocaleTimeString();
