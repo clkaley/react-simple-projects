@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     <div className='container'>
-      <h1>Digital Clock</h1>
+      <h1 className='title'>Digital Clock</h1>
       <div className='currentTime'>{currentTime}</div>
     </div>
     </>

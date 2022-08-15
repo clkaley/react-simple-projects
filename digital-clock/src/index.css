@@ -15,5 +15,19 @@ body {
   color: #3B7097;
 }
 
+.title{
+  font-weight: lighter;
+}
+
+.currentTime{
+  background-color: #3B7097;
+  border-radius: 12px;
+  font-size: 25px;
+  padding: 18px;
+  color: #A9D09E;
+  font-weight: bold;
+  box-shadow: 2px 2px gainsboro;
+}
+
 
 
