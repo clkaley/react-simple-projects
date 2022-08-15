@@ -41,6 +41,8 @@ useState useEffect ve fetch kullanıldı.
 
 fetch():Fetch API, tıpkı Ajax gibi veri alma, veri gönderme işlemlerinde kullanılan asenkron bir yapıdır.
 
+API -> https://type.fit/api/quotes
+
 ![Ekran Görüntüsü (441)](https://user-images.githubusercontent.com/74673470/184708328-44c10847-b3b9-435a-a4f9-c83bfcdc16aa.png)
 
 ![Ekran Görüntüsü (438)](https://user-images.githubusercontent.com/74673470/184707874-4a3f3518-05fc-4c9c-a137-6fb318dce2b9.png)
