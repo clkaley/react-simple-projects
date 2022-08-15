@@ -23,3 +23,14 @@ useState Hook kullanıldı.
 ![Ekran Görüntüsü (431)](https://user-images.githubusercontent.com/74673470/184377009-f0b4118c-b5aa-420e-ba10-7022cf5ea844.png)
 
 ![Ekran Görüntüsü (430)](https://user-images.githubusercontent.com/74673470/184377015-ac12a377-f5a2-4271-bed2-80a680f41213.png)
+
+
+
+### Digital Clock
+useState Hook, toLocaleTimeString ve setInterval fonksiyonu kullanıldı.
+
+toLocaleTimeString(): Metodu, değişken içerisindeki tarih ve zaman bilgisinin tarayıcı lokasyonuna göre sadece saat bilgisini alarak string veri tipine çevirir.
+
+setInterval():Bir işlemi belirli zaman aralıklarında tekrarlayan iki parametre alan bir fonksiyondur.Birinci parametre çalıştırılacak fonksiyonu, ikinci parametre de bu işlemin kaç mili saniye de tekrar edileceğini temsil eder.
+
+![image](https://user-images.githubusercontent.com/74673470/184623985-39f0de6b-1608-4ede-bf8b-cb7b3db5076f.png)
