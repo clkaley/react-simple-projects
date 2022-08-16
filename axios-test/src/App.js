@@ -11,7 +11,8 @@ function App() {
   
   return (
    <>
-   <div>
+   <div className='container'>
+    <h1>Users</h1>
     {
         users.map((user,i)=>{
           return (
