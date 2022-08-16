@@ -55,3 +55,10 @@ Props kullanıldı.
 
 ![Ekran Görüntüsü (442)](https://user-images.githubusercontent.com/74673470/184828793-f9789c0d-7f96-456e-b550-c21d5e45920f.png)
 
+
+
+### Fetch
+useState useEffect ve fetch kullanıldı.
+Fetch Api ->https://restcountries.com/v3.1/all
+
+![image](https://user-images.githubusercontent.com/74673470/184853133-bc602da2-30d8-4118-a61f-b08bc999dae2.png)
