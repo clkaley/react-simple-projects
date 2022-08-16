@@ -16,7 +16,8 @@ function App() {
 
   return (
   <>
-  <div>
+  <div className='container'>
+    <h1>Countries</h1>
     {
       countries.map((country,i)=>{
         return( 
