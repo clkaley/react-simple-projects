@@ -62,3 +62,18 @@ useState useEffect ve fetch kullanıldı.
 Fetch Api ->https://restcountries.com/v3.1/all
 
 ![image](https://user-images.githubusercontent.com/74673470/184853133-bc602da2-30d8-4118-a61f-b08bc999dae2.png)
+
+
+
+### Axios
+useState useEffect ve axios kullanıldı.
+Axios: Getirme API'sına benzer ve HTTP isteklerini gerçekleştirmek için kullanılır.
+Npm kullanarak axios'u kurmak için aşağıdaki komut kullanılabilir
+
+```
+npm install axios
+```
+![Ekran Görüntüsü (444)](https://user-images.githubusercontent.com/74673470/184862310-f52afa3b-678b-4892-b3d5-b95d2a8c0d85.png)
+.
+
+
