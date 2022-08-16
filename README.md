@@ -49,3 +49,9 @@ API -> https://type.fit/api/quotes
 
 ![Ekran Görüntüsü (439)](https://user-images.githubusercontent.com/74673470/184707878-e5c52629-277b-4570-b3a0-3861530d0d2e.png)
 
+
+### Cards 
+Props kullanıldı.
+
+![Ekran Görüntüsü (442)](https://user-images.githubusercontent.com/74673470/184828793-f9789c0d-7f96-456e-b550-c21d5e45920f.png)
+
