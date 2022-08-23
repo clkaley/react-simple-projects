@@ -34,7 +34,19 @@ import {
 <Route path='*' element={<div>ERROR</div>}/>
 ```
 
+* Nested Routes: yani home içine diğer componentleri istiyorum demektir.
 
+```
+  <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}>
+          <Route path='product' element={<Product/>}/>
+          <Route path='about' element={<About/>}/>
+          <Route path='*' element={<Error/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+```
 
 
 
