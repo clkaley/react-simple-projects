@@ -7,6 +7,7 @@ import {
 import Home from './pages/Home'
 import About from './pages/About'
 import Product from './pages/Product'
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='product' element={<Product/>}/>
         <Route path='about' element={<About/>}/>
+        <Route path='*' element={<Error/>}/>
       </Routes>
     </BrowserRouter>
    </>
