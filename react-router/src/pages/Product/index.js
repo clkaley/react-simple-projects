@@ -4,7 +4,7 @@ import '../Product/index.css'
 function Product() {
   return (
     <div>
-      <Link className='btn' to="/">Go Back</Link>
+    
       <h3>Product</h3>
     </div>
   )
