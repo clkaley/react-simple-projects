@@ -28,3 +28,15 @@ element=> ise hangi component ın redner edileceğini gösterir.
 
 testing e gitmek istiyorsak burda yapılması gereken şey localhost:3000/testing yazmaktır.
 
+* eğer varsayılan sayfalar dışında başka bir route yönlendirilmesini istiyorsak bu şekilde yaparız
+
+```
+<Route path='*' element={<div>ERROR</div>}/>
+```
+
+
+
+
+
+
+
