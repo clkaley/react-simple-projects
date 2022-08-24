@@ -49,6 +49,33 @@ import {
 ```
 
 
+* NavLink -> is a special kind of <Link> that knows whether or not it is "active". 
+
+```
+    <NavLink to="/" end>
+      Home
+    </NavLink>
+```
+NavLink ekte görüldüğü gibi neye tıklarsak onun class active i ekler :) 
+
+![Ekran Görüntüsü (502)](https://user-images.githubusercontent.com/74673470/186357204-815c53df-f335-43c8-a85f-69b5e9c5a26c.png)
 
 
+* içerden de kendimiz style verebiliriz
 
+```
+   <NavLink className='btn' to="/" style={(isActive)=>{
+                return {
+                    color: isActive ? 'blue' : 'gray'
+                }}}>Home
+    </NavLink>
+```
+
+```
+ <NavLink  to="/"
+               className={({ isActive }) =>
+               isActive ? "link-active" : "link"
+             }
+            >Home
+ </NavLink>
+```
