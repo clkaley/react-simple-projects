@@ -5,13 +5,12 @@ import products from '../../data'
 function Product() {
   return (
     <div>
-      <h3>Products</h3>
       <div className='products'>
         {products.map((product)=>{
           return (
             <div key={product.id}>
               <h1>{product.name}</h1>
-              <Link to={`/product/${product.id}`} >More Info</Link>
+              <Link className='product-btn' to={`/product/${product.id}`} >More Info</Link>
             </div>
           )
         })}

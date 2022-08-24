@@ -12,9 +12,9 @@ function SingleProduct() {
    const{image, name}=product
   return (
     <>
-    <div className='container'>Single Product
-    <h4>{name}</h4>
-    <img src={image} alt={name} />
+    <div className='container'>
+    <h4 className='title'>{name}</h4>
+    <img className='img-size' src={image} alt={name} />
     </div>
     <Link to='/product' className="btn">Back To Product</Link>
     </>

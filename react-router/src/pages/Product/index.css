@@ -1,6 +1,13 @@
-.btn{
+.products{
+    color: black;
+    font-size: 12px;
+}
+
+.product-btn{
+    background-color: red;
     text-decoration: none;
-    color: red;
+    color: white;
     margin: 10px;
+    padding: 8px;
     font-size: 25px;
 }

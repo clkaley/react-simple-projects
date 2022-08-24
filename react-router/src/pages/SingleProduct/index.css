@@ -1,3 +1,10 @@
 .container{
     margin: 50px;
 }
+.title{
+    font-size: 20px;
+    color: red;
+}
+.img-size{
+    width: 250px;
+}
