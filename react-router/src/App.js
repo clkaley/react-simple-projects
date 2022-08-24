@@ -8,13 +8,15 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Product from './pages/Product'
 import Error from './pages/Error';
+import SharedLayout from './pages/SharedLayout';
 
 function App() {
   return (
    <>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>}>
+        <Route path='/' element={<SharedLayout/>}>
+          <Route index element={<Home/>}/>
           <Route path='product' element={<Product/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='*' element={<Error/>}/>
