@@ -34,7 +34,7 @@ import {
 <Route path='*' element={<div>ERROR</div>}/>
 ```
 
-* Nested Routes: yani home içine diğer componentleri istiyorum demektir.
+### Nested Routes: yani home içine diğer componentleri istiyorum demektir.
 
 ```
   <BrowserRouter>
@@ -49,7 +49,7 @@ import {
 ```
 
 
-* NavLink -> is a special kind of <Link> that knows whether or not it is "active". 
+### NavLink -> is a special kind of <Link> that knows whether or not it is "active". 
 
 ```
     <NavLink to="/" end>
@@ -79,3 +79,53 @@ NavLink ekte görüldüğü gibi neye tıklarsak onun class active i ekler :)
             >Home
  </NavLink>
 ```
+
+
+### Reading URL Params
+useParams: The useParams hook returns an object of key/value pairs of the dynamic params from the current URL that were matched by the <Route path>.
+Dinamik sayfalar oluşturmak için kullandığımız yöntem.
+
+```
+<Route path='product' element={<Product/>}/>
+<Route path='product/:productID' element={<SingleProduct/>}/>
+```
+
+![Ekran Görüntüsü (505)](https://user-images.githubusercontent.com/74673470/186363356-bd25fd57-1e22-4137-a917-eb37074f1e51.png)
+
+![Ekran Görüntüsü (506)](https://user-images.githubusercontent.com/74673470/186363359-aef91ea6-8bc3-412e-b41d-6085a8b36dd1.png)
+
+```
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import './index.css'
+function SingleProduct() {
+  console.log(useParams());
+  <!-- Burda Obje döner -->
+  return (
+    <div className='container'>Single Product</div>
+  )
+}
+
+export default SingleProduct
+```
+
+![Ekran Görüntüsü (510)](https://user-images.githubusercontent.com/74673470/186364635-c0b724dc-336f-40e6-93b7-5ae549fdbf19.png)
+
+
+
+
+
+```
+function SingleProduct() {
+  <!-- Burdaki değer route daki değer ile eşleşmeli -->
+    const {productID}=useParams();
+    console.log("productID",productID);
+  return (
+    <div className='container'>Single Product</div>
+  )
+}
+export default SingleProduct
+```
+
+
+![Ekran Görüntüsü (508)](https://user-images.githubusercontent.com/74673470/186364269-6631713b-a0d1-4fad-b171-425bcb6d2181.png)
