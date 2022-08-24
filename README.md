@@ -90,6 +90,6 @@ Route yapısı oluşturuldu. URL Params (dinamik route yapısı için) ve useNav
 ![Ekran Görüntüsü (514)](https://user-images.githubusercontent.com/74673470/186387474-b801970b-52cc-45c1-a977-de80aa0eb013.png)
 
 ![Ekran Görüntüsü (515)](https://user-images.githubusercontent.com/74673470/186387478-c68c8e6b-d148-4a7b-92c2-ffb940278d8f.png)
-.png…]()
+
 
 
