@@ -74,6 +74,22 @@ Npm kullanarak axios'u kurmak için aşağıdaki komut kullanılabilir
 npm install axios
 ```
 ![Ekran Görüntüsü (444)](https://user-images.githubusercontent.com/74673470/184862310-f52afa3b-678b-4892-b3d5-b95d2a8c0d85.png)
-.
+
+
+
+### React Router
+Route yapısı oluşturuldu. URL Params (dinamik route yapısı için) ve useNavigate() kullanıldı.
+
+![Ekran Görüntüsü (511)](https://user-images.githubusercontent.com/74673470/186387465-8f5a2096-5464-47c8-9b16-2625382e577f.png)
+
+![Ekran Görüntüsü (512)](https://user-images.githubusercontent.com/74673470/186387470-9544ffb5-c6cb-455b-b1f0-4f0dec8b24d9.png)
+
+![Ekran Görüntüsü (513)](https://user-images.githubusercontent.com/74673470/186387588-94536fe2-ee19-447b-8ed2-e1da59302dc2.png)
+
+
+![Ekran Görüntüsü (514)](https://user-images.githubusercontent.com/74673470/186387474-b801970b-52cc-45c1-a977-de80aa0eb013.png)
+
+![Ekran Görüntüsü (515)](https://user-images.githubusercontent.com/74673470/186387478-c68c8e6b-d148-4a7b-92c2-ffb940278d8f.png)
+
 
 
