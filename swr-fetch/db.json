@@ -1,0 +1,19 @@
+{
+    "videos":[
+        {
+            "id":1,
+            "title":"useSWR ile veri yakalama",
+            "author":"coding"
+        },
+        {
+            "id":2,
+            "title":"useSWR ile veri yakalama 2",
+            "author":"coding aleyna"
+        },
+        {
+            "id":3,
+            "title":"useSWR ile veri yakalama",
+            "author":"coding 3"
+        }
+    ]
+}
