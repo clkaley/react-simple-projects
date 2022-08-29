@@ -186,3 +186,31 @@ function App() {
 
 ![Ekran Görüntüsü (523)](https://user-images.githubusercontent.com/74673470/187188681-5963ce7d-1c5c-4972-8bab-29ddedb02e0e.png)
 
+
+
+### React Query
+Hem route hemde query beraber kullanıldı. Detay sayfasına gidilmek için id alındı.
+
+
+```
+ const { isLoading, error, data } = useQuery(["users", userID], () =>
+    fetchUserDetail(userID)
+  );
+```
+
+
+```
+export const fetchUserDetail=async(id)=>{
+    const {data}=await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+    return data
+}
+```
+
+
+![Ekran Görüntüsü (524)](https://user-images.githubusercontent.com/74673470/187232914-66667bbf-ef86-45e8-baa9-8b4839824fdf.png)
+
+
+![Ekran Görüntüsü (525)](https://user-images.githubusercontent.com/74673470/187232918-18f21179-1c51-4044-a239-02369ddd9730.png)
+
+
+![Ekran Görüntüsü (526)](https://user-images.githubusercontent.com/74673470/187232920-416737ef-c9c3-4a50-89ff-364ae67e2138.png)
