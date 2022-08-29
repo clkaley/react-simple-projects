@@ -257,3 +257,5 @@ dolaylı diziye ulaşabilmek için
                 <img src={item.image} className="img-fluid rounded-start" alt="..."/>
               </div>
 ```
+
+![Ekran Görüntüsü (529)](https://user-images.githubusercontent.com/74673470/187288725-bca9039d-6921-415a-91ad-45229dcfba57.png)
