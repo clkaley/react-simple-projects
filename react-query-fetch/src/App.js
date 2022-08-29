@@ -1,13 +1,8 @@
 import { useQuery } from "react-query";
+import { fetchUsers } from "./api";
 
 function App() {
-
-
-  const { isLoading, error, data } = useQuery("users", () =>
-    fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
-      res.json()
-    )
-  );
+  const { isLoading, error, data } = useQuery("users",fetchUsers);
 
   if (isLoading) return "Loading...";
 
