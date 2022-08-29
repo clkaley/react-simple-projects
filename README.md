@@ -214,3 +214,46 @@ export const fetchUserDetail=async(id)=>{
 
 
 ![Ekran Görüntüsü (526)](https://user-images.githubusercontent.com/74673470/187232920-416737ef-c9c3-4a50-89ff-364ae67e2138.png)
+
+
+
+### React SWR
+
+```
+npm install swr
+```
+
+* Fetch
+```
+import fetch from 'unfetch'
+
+const fetcher = url => fetch(url).then(r => r.json())
+
+function App () {
+  const { data, error } = useSWR('/api/data', fetcher)
+  // ...
+}
+```
+
+
+* Axios
+```
+import axios from 'axios'
+
+const fetcher = url => axios.get(url).then(res => res.data)
+
+function App () {
+  const { data, error } = useSWR('/api/data', fetcher)
+  // ...
+}
+```
+
+dolaylı diziye ulaşabilmek için 
+```
+{data &&
+        data.results.map((item)=>{
+          return(
+            <div key={item.id} className="col-md-4 col-lg-3 mt-2">
+                <img src={item.image} className="img-fluid rounded-start" alt="..."/>
+              </div>
+```
