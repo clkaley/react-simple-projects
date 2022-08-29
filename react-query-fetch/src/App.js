@@ -8,11 +8,11 @@ function App() {
 
   if (error) return "An error has occurred: " + error.message;
 
-  console.log("data", data);
+  console.log("data", data.results);
   return (
     <>
       <h1 style={{ textAlign: "center" }}>React Query</h1>
-      {data.map((item, id) => {
+      {data.results.map((item, id) => {
         return (
           <div key={id}>
             {item.name}-{item.username}
