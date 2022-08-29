@@ -183,3 +183,6 @@ function App() {
  import { ReactQueryDevtools } from 'react-query/devtools'
       <ReactQueryDevtools initialIsOpen={false} />
 ```
+
+![Ekran Görüntüsü (523)](https://user-images.githubusercontent.com/74673470/187188681-5963ce7d-1c5c-4972-8bab-29ddedb02e0e.png)
+
