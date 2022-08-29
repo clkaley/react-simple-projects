@@ -104,3 +104,82 @@ useState() useEffect() ve React-Router kullanıldı.
 ![Ekran Görüntüsü (519)](https://user-images.githubusercontent.com/74673470/186884913-8ab20d48-93d1-49f9-bbc7-0cfcfe1915e3.png)
 
 ![Ekran Görüntüsü (520)](https://user-images.githubusercontent.com/74673470/186884920-52d4c144-71e3-42c4-b940-4e9983558d4d.png)
+
+
+### React Query
+React Query, Sunucu ile istemci arasındaki State Yönetimini kolaylaştıran bir kütüphane. Herhangi bir fetch işlemi yapıldığında axios ya da fetch ile çekip state e aktarmak yerine bunu daha kısa şekilde kullanabiliyor.
+
+
+Paket indirilir.
+```
+npm i react-query
+```
+
+Ardından kullanılmak için provide edilir ve import işlemleri yapılır.
+
+
+```
+ import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+ 
+ const queryClient = new QueryClient()
+ 
+ export default function App() {
+   return (
+     <QueryClientProvider client={queryClient}>
+       <Example />
+     </QueryClientProvider>
+   )
+ }
+```
+
+
+Ardından istediğimiz fetch işlemi yapılır bunun için react-query deki useQuery kullanılır. Syntax bu şekildedir. useQuery("key",()=>)
+ilk parametre key diye belirttiğim gibi aslında bir key cachelenmiş dataya erişmek istersek kullanıcağımız ifade burda belirttiğimiz key olucak.
+
+Bize bu data, error ve isLoading isminde veriler sunuyo. Biz bunları manuel olarak yapıyoduk yani state oluşturup onu güncelliyoduk :) 
+
+
+```
+   const { isLoading, error, data } = useQuery('repoData', () =>
+     fetch('https://api.github.com/repos/tannerlinsley/react-query').then(res =>
+       res.json()
+     )
+   )
+ 
+   if (isLoading) return 'Loading...'
+ 
+   if (error) return 'An error has occurred: ' + error.message
+
+```
+
+* Bunu daha efektif yapmak için tüm fetchleri çekebileceğimiz bir dosya oluşturup ordan çekme işlemi yapılabilir. (api.js gibi)
+
+```
+//tüm fetch işlemleri için
+import axios from 'axios'
+
+//tüm userslar için 
+export const fetchUsers=async()=>{
+    const {data}=await axios.get("https://jsonplaceholder.typicode.com/users")
+    return data
+}
+```
+
+
+
+```
+
+import { useQuery } from "react-query";
+import { fetchUsers } from "./api";
+
+function App() {
+  const { isLoading, error, data } = useQuery("users",fetchUsers);
+```
+
+
+* React Query DevTools için aşağıdaki kod parçacıkları eklenir.
+
+```
+ import { ReactQueryDevtools } from 'react-query/devtools'
+      <ReactQueryDevtools initialIsOpen={false} />
+```
