@@ -315,6 +315,12 @@ function App () {
 }
 ```
 
+### Immutability
+index dosyasını çalıştırmak için terminale =>
+
+```
+node index
+```
 
 
 ### Redux
