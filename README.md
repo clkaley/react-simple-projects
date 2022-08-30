@@ -282,3 +282,31 @@ dolaylı diziye ulaşabilmek için
 
 ![Ekran Görüntüsü (531)](https://user-images.githubusercontent.com/74673470/187389306-1a975f05-5a8a-420a-a6c1-31e4716b0f57.png)
 
+
+
+* Global Configuration
+```
+import useSWR, { SWRConfig } from 'swr'
+
+<SWRConfig value={options}>
+  <Component/>
+</SWRConfig>
+```
+
+
+```
+import useSWR, { SWRConfig } from 'swr'
+
+function App () {
+  return (
+    <SWRConfig 
+      value={{
+        refreshInterval: 3000,
+        fetcher: (resource, init) => fetch(resource, init).then(res => res.json())
+      }}
+    >
+      <Dashboard />
+    </SWRConfig>
+  )
+}
+```
