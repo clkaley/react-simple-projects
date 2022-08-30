@@ -314,3 +314,15 @@ function App () {
   )
 }
 ```
+
+
+
+### Redux
+Redux state management çeşitlerinden biridir. Peki state nedir uygulamanın o anki durumudur. Bu özellik ve bilgilerin değişkenlik göstermesi state denen kavramı ortaya çıkarıyor. Örneğin bir checkbox’ın işaretli olup olmaması bir durumdur (statedir), bir bilgidir.
+
+
+![1535450857_image1](https://user-images.githubusercontent.com/74673470/187491338-8d700f59-7a90-4c83-a44c-4bb790b5f402.png)
+
+Örnekte verilen resim şu durumu gösteriyor: Componentler arasında değiştirilen state in başka component e erişmesini sağlamak sm dışında zordur.
+
+Redux bize ne sunuyo verileri tuttuğu bir store mevcut bu store bütün componentler ı store a bağlanıyor.
