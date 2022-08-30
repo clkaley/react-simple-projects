@@ -107,6 +107,8 @@ useState() useEffect() ve React-Router kullanıldı.
 
 
 ### React Query
+[React Query](https://react-query-v3.tanstack.com/)
+
 React Query, Sunucu ile istemci arasındaki State Yönetimini kolaylaştıran bir kütüphane. Herhangi bir fetch işlemi yapıldığında axios ya da fetch ile çekip state e aktarmak yerine bunu daha kısa şekilde kullanabiliyor.
 
 
