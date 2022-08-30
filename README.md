@@ -259,3 +259,26 @@ dolaylı diziye ulaşabilmek için
 ```
 
 ![Ekran Görüntüsü (529)](https://user-images.githubusercontent.com/74673470/187288725-bca9039d-6921-415a-91ad-45229dcfba57.png)
+
+
+
+
+### React SWR with Router
+
+```
+    <Route path="/:characterID" element={<CharacterDetail />}/>
+```
+
+
+```
+  const { data, error } = useSWR(
+    `https://rickandmortyapi.com/api/character/${characterID}`,
+    fetcher
+  );
+```
+
+
+![Ekran Görüntüsü (530)](https://user-images.githubusercontent.com/74673470/187389304-c86a2191-2b39-485a-a199-d105b0900ea2.png)
+
+![Ekran Görüntüsü (531)](https://user-images.githubusercontent.com/74673470/187389306-1a975f05-5a8a-420a-a6c1-31e4716b0f57.png)
+
