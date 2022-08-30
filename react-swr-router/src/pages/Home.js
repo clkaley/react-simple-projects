@@ -1,10 +1,10 @@
 import React from 'react'
 import useSWR from 'swr'
 import { Link } from 'react-router-dom'
-const fetcher = (...args) => fetch(...args).then(res => res.json())
+
 
 function Home() {
-  const { data, error } = useSWR('https://rickandmortyapi.com/api/character', fetcher)
+  const { data, error } = useSWR('https://rickandmortyapi.com/api/character')
   console.log("data",data);
 
   if (error) return <div>failed to load</div>

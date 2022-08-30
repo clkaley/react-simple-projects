@@ -1,13 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useSWR from "swr";
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
 function CharacterDetail() {
   const { characterID } = useParams();
   console.log("characterID", characterID);
   const { data, error } = useSWR(
-    `https://rickandmortyapi.com/api/character/${characterID}`,
-    fetcher
+    `https://rickandmortyapi.com/api/character/${characterID}`
   );
   console.log("data", data);
 
