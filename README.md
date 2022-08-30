@@ -218,6 +218,8 @@ export const fetchUserDetail=async(id)=>{
 
 
 ### React SWR
+ [SWR](https://swr.vercel.app/) detaylı bilgi için
+
 
 ```
 npm install swr
