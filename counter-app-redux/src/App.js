@@ -1,9 +1,10 @@
-
+import Counter from "./redux/components/Counter";
 
 function App() {
   return (
-   <>
-   </>
+    <>
+      <Counter />
+    </>
   );
 }
 
