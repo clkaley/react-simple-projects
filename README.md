@@ -459,6 +459,10 @@ import { decrement, increment } from "../counter/counterSlice";
   );
 }
 ```
+![Ekran Görüntüsü (535)](https://user-images.githubusercontent.com/74673470/187711183-6ac4d5c1-f96c-4de4-bf89-e375e248c83a.png)
+
+
+![Ekran Görüntüsü (536)](https://user-images.githubusercontent.com/74673470/187711191-91b4f4f5-57a9-47d1-bc7a-0ebcbaa27d9b.png)
 
 
 ```
