@@ -8,7 +8,17 @@ export const counterSlice = createSlice({
   initialState: {
     value: 0,
   },
-  reducers: {},
+  //update etmek için kullancağımız kısım reducers kısmı
+  reducers: {
+    //state in içinde üstteki objemiz olucak yani value ya erişebiliriz.
+    increment:(state)=>{
+        state.value+=1;
+    },
+    decrement:(state)=>{
+        state.value-=1;
+    }
+  },
 });
 
+export const {increment,decrement}=counterSlice.actions
 export default counterSlice.reducer;
