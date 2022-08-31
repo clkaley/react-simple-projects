@@ -332,3 +332,135 @@ Redux state management çeşitlerinden biridir. Peki state nedir uygulamanın o 
 Örnekte verilen resim şu durumu gösteriyor: Componentler arasında değiştirilen state in başka component e erişmesini sağlamak sm dışında zordur.
 
 Redux bize ne sunuyo verileri tuttuğu bir store mevcut bu store bütün componentler ı store a bağlanıyor.
+
+
+
+### Counter-App Redux
+
+Paketler indirilir.
+```
+npm install @reduxjs/toolkit react-redux
+```
+
+@reduxjs/toolkit -> Redux kullanmak için
+
+react-redux-> Reduxta kullanılanları componentlere bağlamak için
+
+
+Store oluşturuluyor.
+```
+import {configureStore} from '@reduxjs/toolkit';
+
+
+export const store=configureStore({
+    reducer:{},
+});
+
+```
+
+
+
+Bunları tüm componentler ile sarmalamak lazım index.js e gelip
+
+```
+import {store} from './redux/store'
+//Altındaki sarmalandığı componentler e kendisine geçilen store daki dataları paslamak.
+import {Provider} from 'react-redux'
+```
+
+
+counterSlice.js
+```
+//createSlice bize bir Slice oluşturucak bunun içinde ise state in içinde durucak her şey burda olucak
+import { createSlice } from "@reduxjs/toolkit";
+
+//niye dışarı aktardık store.js üzerindeki reducers a vericez.
+export const counterSlice = createSlice({
+  //state ulaşmak istediğimiz zaman state.counter
+  name: "counter",
+  initialState: {
+    value: 0,
+  },
+  reducers: {},
+});
+
+export default counterSlice.reducer;
+```
+
+
+store.js
+```
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./counter/counterSlice";
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
+
+```
+
+Counter.js
+```
+import React from 'react'
+import {useSelector} from 'react-redux'
+function Counter() {
+    const value=useSelector((state)=>state)
+    console.log("counter value",value);
+  return (
+    <div style={{textAlign:"center"}}>
+        {/* <h1>{value}</h1> */}
+    </div>
+  )
+}
+
+export default Counter
+```
+
+![Ekran Görüntüsü (533)](https://user-images.githubusercontent.com/74673470/187668241-e1e64652-1132-43c0-bd67-98a92a32a153.png)
+
+
+
+
+Counter.js değere erişmek istiyorsak bu şekilde erişebiliriz.
+```
+  const value=useSelector((state)=>state.counter.value)
+```
+
+
+* Veriyi Güncellemek için createSlice tanımında oluşturduğumuz reducers içine yazıyoruz ve onları dışarı aktarmamız gerekiyor.
+
+```
+  reducers: {
+    //state in içinde üstteki objemiz olucak yani value ya erişebiliriz.
+    increment:(state)=>{
+        state.value+=1;
+    },
+    decrement:(state)=>{
+        state.value-=1;
+    }
+  },
+
+  export const {increment,decrement}=counterSlice.actions
+```
+
+
+Counter.js useDispatch import edilir ve actionlar burada kullanılır
+```
+import { useSelector ,useDispatch} from "react-redux";
+import { decrement, increment } from "../counter/counterSlice";
+ function Counter() {
+  const dispatch=useDispatch()
+    return (
+    <div style={{ textAlign: "center" }}>
+      <button onClick={()=>dispatch(decrement())}>Decrement</button>
+      <button onClick={()=>dispatch(increment())}>Increment</button>
+    </div>
+  );
+}
+```
+
+
+```
+
+```
