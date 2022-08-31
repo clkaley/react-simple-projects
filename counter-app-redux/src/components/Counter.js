@@ -5,7 +5,7 @@ import {
   increment,
   incrementByAmount,
   decrementByAmount
-} from "../counter/counterSlice";
+} from "../redux/counter/counterSlice";
 
 function Counter() {
   const value = useSelector((state) => state.counter.value);
@@ -20,16 +20,20 @@ function Counter() {
 
       <br />
       <br />
-      <input className="mt-3" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)}
+      <div>
+      <input className="" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)}
         />
-      <button className="btn btn-success mt-2" onClick={() => dispatch(incrementByAmount(amount))}>
+      <button className="btn btn-success mt-2 m-2" onClick={() => dispatch(incrementByAmount(amount))}>
         Increment by amount
       </button>
-      <input className="mt-5" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)}
+      </div>
+      <div>
+      <input className="mt-5 m-2" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)}
         />
-      <button className="btn btn-danger mt-2" onClick={() => dispatch(decrementByAmount(amount))}>
+      <button className="btn btn-danger " onClick={() => dispatch(decrementByAmount(amount))}>
         Decrement by amount
       </button>
+      </div>
     </div>
   );
 }

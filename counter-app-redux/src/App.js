@@ -1,4 +1,4 @@
-import Counter from "./redux/components/Counter";
+import Counter from "./components/Counter";
 
 function App() {
   return (
