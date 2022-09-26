@@ -470,32 +470,10 @@ import { decrement, increment } from "../counter/counterSlice";
 ### Fetch Redux 
 
 
-```
 
-```
+### Search Bar
 
+![Ekran Görüntüsü (637)](https://user-images.githubusercontent.com/74673470/192282489-c97692b6-4e3d-4690-8de5-872f2b88203f.png)
 
+![Ekran Görüntüsü (638)](https://user-images.githubusercontent.com/74673470/192282494-da95668e-aa1d-415c-a58b-82ad6e22f7dc.png)
 
-```
-
-```
-
-
-
-
-```
-
-```
-
-
-
-
-```
-
-```
-
-
-
-```
-
-```
