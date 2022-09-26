@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-dark bg-dark navbar-expand-lg ">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Ricky Morty
