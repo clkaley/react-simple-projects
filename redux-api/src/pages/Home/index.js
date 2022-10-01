@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCharacters } from "../../redux/charactersSlice";
-import Masonry from "react-masonry-css";
 import "../Home/style.css";
 import Loading from "../../components/Loading";
 import Error from "../../components/Error";
+import { Link } from "react-router-dom";
 function Home() {
   const characters = useSelector((state) => state.characters.items);
   const isLoading = useSelector((state) => state.characters.isLoading);
@@ -15,29 +15,38 @@ function Home() {
     dispatch(fetchCharacters());
   }, [dispatch]);
 
-  if(isLoading){
-    return <Loading/>
+  if (isLoading) {
+    return <Loading />;
   }
 
-  if(error){
-    return <Error/>
+  if (error) {
+    return <Error />;
   }
   return (
     <div>
-     
-      <Masonry
-        breakpointCols={4}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {characters.map((character) => (
-          <div key={character.char_id}>
-            <img src={character.img} alt={character.name}
-            className="character" />
-            <h4>{character.name}</h4>
-          </div>
-        ))}
-      </Masonry>
+      <div className="container">
+        <div className="row">
+          {characters.map((character) => {
+            return (
+              <div
+                key={character.char_id}
+                className="col-sm-6 col-lg-4 col-xl-3"
+              >
+                <div className="card mt-5" key={character.char_id}>
+                  <Link className="link" to={`/character/${character.char_id}`}>
+                    <img
+                      src={character.img}
+                      alt={character.name}
+                      className="card-img-top"
+                    />
+                    <h4 className="text-center">{character.name}</h4>
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
