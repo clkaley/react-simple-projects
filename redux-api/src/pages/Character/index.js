@@ -6,10 +6,9 @@ import Loading from "../../components/Loading";
 import Error from "../../components/Error";
 import { Link } from "react-router-dom";
 function Character() {
-    const characters = useSelector((state) => state.characters.items);
+  const characters = useSelector((state) => state.characters.items);
   const isLoading = useSelector((state) => state.characters.isLoading);
   const error = useSelector((state) => state.characters.error);
-  console.log(characters);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCharacters());
@@ -24,7 +23,7 @@ function Character() {
   }
   return (
     <div>
-        <div className="container">
+      <div className="container">
         <div className="row">
           {characters.map((character) => {
             return (
@@ -48,7 +47,7 @@ function Character() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Character
+export default Character;
