@@ -477,3 +477,16 @@ import { decrement, increment } from "../counter/counterSlice";
 
 ![Ekran Görüntüsü (638)](https://user-images.githubusercontent.com/74673470/192282494-da95668e-aa1d-415c-a58b-82ad6e22f7dc.png)
 
+
+### Redux API
+
+![Ekran Görüntüsü (656)](https://user-images.githubusercontent.com/74673470/194391654-d11920bd-9600-4323-8402-a738bef26e4c.png)
+
+![Ekran Görüntüsü (657)](https://user-images.githubusercontent.com/74673470/194391661-d2269c27-f17e-4adc-9afe-aeb0e72370b8.png)
+
+![Ekran Görüntüsü (658)](https://user-images.githubusercontent.com/74673470/194391674-242658b6-7362-4742-b56d-e7b29111bc7d.png)
+
+![Ekran Görüntüsü (659)](https://user-images.githubusercontent.com/74673470/194391678-9591631c-4dbe-49da-a108-bae52a989b89.png)
+
+![Ekran Görüntüsü (660)](https://user-images.githubusercontent.com/74673470/194391679-015fb50b-2194-4ce4-ab2c-7ca08c6cd91e.png)
+
