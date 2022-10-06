@@ -24,27 +24,9 @@ function Home() {
   }
   return (
     <div>
-      <div className="container">
+      <div className="container mt-5">
         <div className="row">
-          {characters.map((character) => {
-            return (
-              <div
-                key={character.char_id}
-                className="col-sm-6 col-lg-4 col-xl-3"
-              >
-                <div className="card mt-5" key={character.char_id}>
-                  <Link className="link" to={`/character/${character.char_id}`}>
-                    <img
-                      src={character.img}
-                      alt={character.name}
-                      className="card-img-top"
-                    />
-                    <h4 className="text-center">{character.name}</h4>
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
+           <h1 className="text-center">Breaking Bad API with redux</h1>
         </div>
       </div>
     </div>
