@@ -1,51 +1,58 @@
-import React, { useEffect } from 'react'
-import { useSelector,useDispatch } from 'react-redux'
-import Error from '../../components/Error';
-import Loading from '../../components/Loading';
-import { fetchAllQuotes,selectError,selectStatus,selectQuotes } from '../../redux/quotesSlice';
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import Error from "../../components/Error";
+import Loading from "../../components/Loading";
+import {
+  fetchAllQuotes,
+  selectError,
+  selectStatus,
+  selectQuotes,
+} from "../../redux/quotesSlice";
 
 function Quotes() {
-  const dispatch= useDispatch()
-  const data=useSelector(selectQuotes)
-  const status=useSelector(selectStatus)
-  const error=useSelector(selectError)
-  console.log("quotes:",data);
+  const dispatch = useDispatch();
+  const data = useSelector(selectQuotes);
+  const status = useSelector(selectStatus);
+  const error = useSelector(selectError);
+  console.log("quotes:", data);
 
-
-
-  useEffect(()=>{
-    if(status==='idle'){
-      dispatch(fetchAllQuotes())
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchAllQuotes());
     }
-  
-  },[dispatch,status])
+  }, [dispatch, status]);
 
-
-  if(error){
-    return <Error message={error}/>
+  if (error) {
+    return <Error message={error} />;
   }
   return (
     <div>
-      {status==='loading' && <Loading/>}
+      {status === "loading" && <Loading />}
 
-      {status==='succeeded' && data.map((item)=>{
-        return(
-          <div
-           key={item.quote_id}
-           className="mt-5">
-           <figure className="text-center">
-  <blockquote className="blockquote">
-    <p>{item.quote}</p>
-  </blockquote>
-  <figcaption className="blockquote-footer">
-    {item.author}<cite title="Source Title"> {item.series}</cite>
-  </figcaption>
-</figure>
-           </div>
-        )
-      })}
+      {status === "succeeded" &&
+        data.map((item) => {
+          return (
+            <div key={item.quote_id} className="mt-5 m-5">
+              <figure className="text-start">
+                <Link
+                 className="link"
+                 to={`/quotes/${item.quote_id}`}>
+                <blockquote className="blockquote">
+                  <p>{item.quote}</p>
+                </blockquote>
+                <figcaption className="blockquote-footer">
+                  {item.author}
+                  <cite title="Source Title"></cite>
+                </figcaption>
+                </Link>
+              </figure>
+
+            </div>
+          );
+        })}
     </div>
-  )
+  );
 }
 
-export default Quotes
+export default Quotes;
