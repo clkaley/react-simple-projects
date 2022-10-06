@@ -31,7 +31,8 @@ function Quotes() {
       {status==='succeeded' && data.map((item)=>{
         return(
           <div
-           key={item.quote_id}>
+           key={item.quote_id}
+           className="mt-5">
            <figure className="text-center">
   <blockquote className="blockquote">
     <p>{item.quote}</p>
