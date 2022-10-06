@@ -14,6 +14,7 @@ function Navbar() {
       <div className="navbar-nav">
         <Link className="nav-link active" aria-current="page" to="/">Breaking Bad</Link>
         <Link className="nav-link" to="/character">Characters</Link>
+        <Link className="nav-link" to="/quotes">Quotes</Link>
        
       </div>
     </div>
