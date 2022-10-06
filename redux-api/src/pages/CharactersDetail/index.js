@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../../components/Loading";
-
+import {Helmet} from "react-helmet";
 function CharactersDetail() {
   const { charID } = useParams();
   console.log("charID", charID);
@@ -18,6 +18,11 @@ function CharactersDetail() {
   return (
     <>
     {loading && <Loading/>}
+    <Helmet>
+                <meta charSet="utf-8" />
+                <title>Character</title>
+               
+            </Helmet>
       <div className="card mb-3 mt-5" style={{ maxwidth: "240px" }}>
         <div className="row g-0">
           <div className="col-md-4">

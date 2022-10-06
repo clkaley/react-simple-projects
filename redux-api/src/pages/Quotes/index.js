@@ -9,7 +9,7 @@ import {
   selectStatus,
   selectQuotes,
 } from "../../redux/quotesSlice";
-
+import {Helmet} from "react-helmet";
 function Quotes() {
   const dispatch = useDispatch();
   const data = useSelector(selectQuotes);
@@ -29,7 +29,11 @@ function Quotes() {
   return (
     <div>
       {status === "loading" && <Loading />}
-
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Quotes</title>
+               
+            </Helmet>
       {status === "succeeded" &&
         data.map((item) => {
           return (

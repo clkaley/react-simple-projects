@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import {Helmet} from "react-helmet";
 function QuotesDetail() {
   const { quotesID } = useParams();
   console.log("quotesID", quotesID);
@@ -14,6 +14,11 @@ function QuotesDetail() {
 
   return (
     <div>
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Quotes</title>
+               
+            </Helmet>
       <h1 className="text-center mt-5">QUOTE DETAIL</h1>
       <figure className="text-center">
         <blockquote className="blockquote">

@@ -5,6 +5,7 @@ import "../Home/style.css";
 import Loading from "../../components/Loading";
 import Error from "../../components/Error";
 import { Link } from "react-router-dom";
+import {Helmet} from "react-helmet";
 function Character() {
   const characters = useSelector((state) => state.characters.items);
   const isLoading = useSelector((state) => state.characters.isLoading);
@@ -23,6 +24,11 @@ function Character() {
   }
   return (
     <div>
+       <Helmet>
+                <meta charSet="utf-8" />
+                <title>Character</title>
+               
+            </Helmet>
       <div className="container">
         <div className="row">
           {characters.map((character) => {
